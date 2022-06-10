@@ -1,0 +1,191 @@
+* 
+{
+    font-family: Josefin Sans;
+}
+
+body
+{
+    background-color: hsl(235, 21%, 11%);
+    background-image: url("./images/bg-desktop-dark.jpg");
+    background-size: 100% 350px;
+    background-repeat: no-repeat;
+}
+
+#name-container
+{
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    justify-content: center;
+    color: white;
+}
+
+#name-container h1
+{
+    padding-right: 300px;
+    margin: 0;
+    font-size: 50px;
+}
+
+#display-mode:hover
+{
+    opacity: 0.5;
+}
+
+#todo-list
+{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#current-input
+{
+    width: 480px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0;
+    height: 60px;
+    background-color: hsl(235, 24%, 19%);
+    padding-left: 60px;
+    color: white;
+}
+
+#checkbox
+{
+    position: relative;
+    left: 600px;
+    top: 15px;
+}
+
+#first-circle-box, .circle-box
+{
+    appearance: none;
+    background-color: hsl(235, 24%, 19%);
+    margin: 0;
+    width: 2em;
+    height: 2em;
+    border: 0.08em solid gray;
+    border-radius: 50px;
+    position: relative;
+    left: 20px;
+    top: 15px;
+}
+
+.circle-box
+{
+    cursor: pointer;
+}
+
+.circle-box:hover
+{
+    border-color: hsl(280, 87%, 65%);
+}
+
+.icon-check
+{
+    position: relative;
+    top: 23px;
+    left: 2px;
+    opacity: 0;
+}
+
+.icon-cross
+{
+    position: relative;
+    top: 23px;
+    left: 2px;
+}
+
+span
+{
+    width: 0;
+}
+
+#main-list
+{
+    display: grid;
+    grid-auto-rows: 62px;
+    grid-template-columns: 540px;
+    justify-content: center;
+}
+
+#main-list >ul
+{
+    padding: 0;
+    margin: 0;
+}
+
+#main-list >ul>li
+{    
+    background-color: hsl(235, 24%, 19%);
+    border-bottom: 0.5px solid gray;
+    height: 62px;
+    width: 540px;
+    list-style-type: none;
+}
+
+.items
+{
+    color: white;
+    font-size: 18px;
+    display: flex;
+}
+
+.text-and-cross
+{
+    padding-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.icon-cross
+{
+    cursor: pointer;
+}
+
+.icon-cross:hover
+{
+    opacity: 0.5;
+}
+
+#main-list #bottom
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-list #bottom p 
+{
+    color: hsl(236, 9%, 61%);
+    margin-top: 22px;
+    font-size: 15px;
+}
+
+#main-list #bottom p:hover
+{
+    opacity: 0.5;
+    color: hsl(220, 98%, 61%);
+    cursor: pointer;
+}
+
+#main-list #bottom #clear:hover
+{
+    color: red;
+}
+
+#list li:first-of-type
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#list li:last-of-type
+{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 0;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
