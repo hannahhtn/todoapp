@@ -7,7 +7,7 @@ body
 {
     background-color: hsl(235, 21%, 11%);
     background-image: url("./images/bg-desktop-dark.jpg");
-    background-size: 100% 350px;
+    background-size: 100vw 350px;
     background-repeat: no-repeat;
 }
 
@@ -16,13 +16,12 @@ body
     display: flex;
     padding-top: 100px;
     padding-bottom: 60px;
-    justify-content: center;
+    justify-content: space-evenly;
     color: white;
 }
 
 #name-container h1
 {
-    padding-right: 300px;
     margin: 0;
     font-size: 50px;
 }
@@ -34,21 +33,26 @@ body
 
 #todo-list
 {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+    width: 540px;
+    font-size: 18px;
 }
 
 #current-input
 {
-    width: 480px;
-    font-size: 18px;
+    flex: 1;
     border-radius: 5px;
     border: 0;
-    height: 60px;
+    /* height: 60px; */
     background-color: hsl(235, 24%, 19%);
     padding-left: 60px;
     color: white;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 #checkbox
@@ -90,13 +94,6 @@ body
     opacity: 0;
 }
 
-.icon-cross
-{
-    position: relative;
-    top: 23px;
-    left: 2px;
-}
-
 span
 {
     width: 0;
@@ -105,7 +102,6 @@ span
 #main-list
 {
     display: grid;
-    grid-auto-rows: 62px;
     grid-template-columns: 540px;
     justify-content: center;
 }
@@ -120,8 +116,6 @@ span
 {    
     background-color: hsl(235, 24%, 19%);
     border-bottom: 0.5px solid gray;
-    height: 62px;
-    width: 540px;
     list-style-type: none;
 }
 
@@ -135,9 +129,11 @@ span
 .text-and-cross
 {
     padding-left: 35px;
+    padding-right: 35px;
     display: flex;
     justify-content: space-between;
-    width: 450px;
+    align-items: center;
+    flex: 1;
 }
 
 .icon-cross
@@ -189,3 +185,38 @@ span
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 425px) {
+    #main-list
+    {
+        grid-template-columns: 90vw;
+    }
+
+    #todo-list
+    {
+        width: 90vw;
+    }
+
+    #main-list #bottom p, .items, #current-input
+    {
+        font-size: 10px;
+    }
+
+    #first-circle-box, .circle-box
+    {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .text-and-cross
+    {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #current-input
+    {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
